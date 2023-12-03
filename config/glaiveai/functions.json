@@ -1,0 +1,91 @@
+{
+    "functions": [
+        {
+            "name": "turn_on_light",
+            "description": "Turn on a light selected by the user",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the light."
+                    }
+                },
+                "required": ["name"]
+            }
+        },
+        {
+            "name": "turn_off_light",
+            "description": "Turn off a light selected by the user",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the light."
+                    }
+                },
+                "required": ["name"]
+            }
+        },
+        {
+            "name": "change_light_color",
+            "description": "Change the color of a light.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the light."
+                    },
+                    "r": {
+                        "type": "int",
+                        "description": "The red value of the color."
+                    },
+                    "g": {
+                        "type": "int",
+                        "description": "The green value of the color."
+                    },
+                    "b": {
+                        "type": "int",
+                        "description": "The blue value of the color."
+                    }
+                }
+            }
+        },
+        {
+            "name": "get_weather",
+            "description": "Get the weather for a city requested by the user",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "city": {
+                        "type": "string",
+                        "description": "The city"
+                    }
+                },
+                "required": ["city"]
+            }
+        },
+        {
+            "name": "lock_computer",
+            "description": "Lock the computer of the user.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                },
+                "required": []
+            }
+        },
+        {
+            "name": "shutdown_computer",
+            "description": "Shutdown the computer of the user.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                },
+                "required": []
+            }
+        }
+    ]
+}

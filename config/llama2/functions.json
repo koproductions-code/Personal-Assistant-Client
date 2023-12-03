@@ -1,0 +1,73 @@
+{
+    "functions": [
+        {
+            "function": "turn_on_light",
+            "description": "Turn on a light selected by the user",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "string",
+                    "description": "The name of the light."
+                }
+            ]
+        },
+        {
+            "function": "turn_off_light",
+            "description": "Turn off a light selected by the user",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "string",
+                    "description": "The name of the light."
+                }
+            ]
+        },        
+        {
+            "function": "change_light_color",
+            "description": "Change the color of a light.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "string",
+                    "description": "The name of the light."
+                },
+                {
+                    "name": "r",
+                    "type": "int",
+                    "description": "The red value of the color from 0-255"
+                },
+                {
+                    "name": "g",
+                    "type": "int",
+                    "description": "The green value of the color 0-255"
+                },
+                {
+                    "name": "b",
+                    "type": "int",
+                    "description": "The blue value of the color 0-255"
+                }
+            ]
+        },        
+        {
+            "function": "get_weather",
+            "description": "Get the weather for a city requested by the user",
+            "arguments": [
+                {
+                    "name": "city",
+                    "type": "string",
+                    "description": "The city"
+                }
+            ]
+        },        
+        {
+            "function": "lock_computer",
+            "description": "Lock the computer of the user.",
+            "arguments": []
+        },        
+        {
+            "function": "shutdown_computer",
+            "description": "Shutdown the computer of the user.",
+            "arguments": []
+        }        
+    ]
+}
