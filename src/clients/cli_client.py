@@ -1,12 +1,6 @@
 from server.Server import LLMServer
 from datetime import datetime
 
-"""
-TODO:
-Function Returns
-Generalize Call Function 
-"""
-
 class CLIClient:
 
     def __init__(self, host, port, config, model) -> None:
@@ -20,7 +14,7 @@ class CLIClient:
         prompt = self.model.generate_prompt(prompt)
 
         result = self.server.request(system, functions, prompt)
-        self.model.handle_response(result, prompt)
+        self.model.handle_response(result, prompt, self.server)
     
     def main(self):
         while True:
@@ -30,4 +24,4 @@ class CLIClient:
             end_time = datetime.now()
 
             time_difference = end_time - start_time
-            print(f"Time: {time_difference.total_seconds()}")
+            print(f"\033[32m Time: {time_difference.total_seconds()}")

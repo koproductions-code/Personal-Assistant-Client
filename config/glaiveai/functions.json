@@ -86,6 +86,16 @@
                 },
                 "required": []
             }
+        },
+        {
+            "name": "get_calendar",
+            "description": "Get the next calendar events of the user.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                },
+                "required": []
+            }
         }
     ]
 }

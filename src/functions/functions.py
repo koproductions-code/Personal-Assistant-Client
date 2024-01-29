@@ -38,3 +38,16 @@ def shutdown_computer():
 def lock_computer():
     os.system("dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock")
     return FunctionResponse(False, {"success": True, "info": ""})
+
+def get_calendar():
+    mydict = """{
+    "events": [
+        {
+            "title": "Soccer Training",
+            "time": "18:00",
+            "endtime": "19:30",
+            "additional_info": "Bring soccer equipment"
+        }
+    ]
+    }"""
+    return FunctionResponse(True, {"success": True, "info": mydict})

@@ -1,7 +1,6 @@
 #https://github.com/davabase/whisper_real_time
 
 import pyaudio
-import math
 import struct
 import whisper
 import time
