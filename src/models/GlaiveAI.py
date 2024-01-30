@@ -30,7 +30,7 @@ class GlaiveAI_Model(LLMModel):
 
             if result.return_to_assistant == True:
                 function_return = self.generate_function_return(result)
-                history = self.generate_prompt(orig_prompt, False) + "\n" + "ASSISTANT: <functioncall> {'name': 'get_calendar', 'arguments': {}}"
+                history = self.generate_prompt(orig_prompt, False) + "\n" + "ASSISTANT: " + newprompt
                 new_response = server.request(self.generate_system(), self.generate_functions(self.config), history + "\n" + function_return)
 
                 assistant_answer = new_response.split("ASSISTANT: ")

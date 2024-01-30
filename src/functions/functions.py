@@ -7,29 +7,29 @@ def get_weather(city: str):
 
 def turn_on_light(name: str):
     result = ha_turn_on_light("light."+name.lower().replace(" ", "_"))
-    return FunctionResponse(True, {"success": result, "info": ""})
+    return FunctionResponse(False, {"success": result, "info": ""})
 
 def change_light_color(name: str, r: int, g: int, b: int):
     result = ha_change_light_color("light."+name.lower().replace(" ", "_"), r, g, b)
-    return FunctionResponse(True, {"success": result, "info": ""})
+    return FunctionResponse(False, {"success": result, "info": ""})
 
 def turn_off_light(name: str):
     result = ha_turn_off_light("light."+name.lower().replace(" ", "_"))
-    return FunctionResponse(True, {"success": result, "info": ""})
+    return FunctionResponse(False, {"success": result, "info": ""})
 
 def turn_on_room_lights(room: str):
     if room.lower() == "bedroom":
         result = ha_turn_on_light("light.bedroom")
-        return FunctionResponse(True, {"success": result, "info": ""})
+        return FunctionResponse(False, {"success": result, "info": ""})
     else:
-        return FunctionResponse(True, {"success": False, "info": "This room does not exist."})
+        return FunctionResponse(False, {"success": False, "info": "This room does not exist."})
 
 def turn_off_room_lights(room: str):
     if room.lower() == "bedroom":
         result = ha_turn_off_light("light.bedroom")
-        return FunctionResponse(True, {"success": result, "info": ""})
+        return FunctionResponse(False, {"success": result, "info": ""})
     else:
-        return FunctionResponse(True, {"success": False, "info": "This room does not exist."})
+        return FunctionResponse(False, {"success": False, "info": "This room does not exist."})
 
 def shutdown_computer():
     os.system("sleep 10 && shutdown -h now &")
