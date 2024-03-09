@@ -1,7 +1,7 @@
 import requests
 
-home_assistant_url = "https://homeassistant.koproductions.dev"
-access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI3Y2ZmYzEwYTc2YzM0NmQxYTg2YWUxNTRkNTVhYjYyOCIsImlhdCI6MTcwMDkzNTkxNSwiZXhwIjoyMDE2Mjk1OTE1fQ.gr6Gya5rlXNcLGnRBHnQGPnprmYt7d98AY9bOGDRl8s"
+home_assistant_url = "HOME_ASSISTANT_URL"
+access_token = "ACCESS_TOKEN"
 
 headers = {
     "Authorization": f"Bearer {access_token}",
